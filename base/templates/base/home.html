@@ -1,0 +1,18 @@
+{% extends 'main.html'%}
+
+{% block content%}
+<h1> Home Template</h1>
+
+
+<div>
+    <div>
+        {% for proj in project%}
+            <div>
+                <h5>
+                    {{proj.id}} -- {{proj.name}}
+                </h5>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content%}
