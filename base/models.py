@@ -4,10 +4,15 @@ from django.db import models
 
 
 class Project(models.Model):
+    #Descriptions
     title = models.CharField(max_length=200)
     summary = models.TextField()
+
+    #Links
     page_url = models.URLField(max_length=200)
     gif_url = models.URLField(max_length=200)
+
+    ##Atributes
     SQL = models.BooleanField(default=False)
     Machine_Learning = models.BooleanField(default=False)
     Team_Work = models.BooleanField(default=False)
@@ -19,9 +24,9 @@ class Project(models.Model):
     area_choices = [
         ('DS', 'Data Science'),
         ('PD', 'Product Development'),
-        ('RS', 'Research'),
+        ('RS', 'Physics'),
     ]
-    
+    #
     area = models.CharField(
         max_length=2,
         choices=area_choices,
