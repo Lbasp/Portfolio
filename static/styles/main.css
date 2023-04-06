@@ -1,4 +1,4 @@
-* {
+ * {
   margin:0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
   outline: none;
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
-}
+} 
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
@@ -97,13 +97,21 @@ section {
   font-weight: 700;
   line-height:1.3;
 }
+.home-content p {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
 .sidebar a {
   justify-content: start;
   align-items: center;
-}
+  position: relative;
+} 
+
+
 #menu-icon {
   font-size:3.6rem;
   color: var(--text-color);
   display: none;
-}
+} 
 
