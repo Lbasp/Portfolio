@@ -8,6 +8,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type='text/css' media='screen' href = "{% static 'styles/main.css'%}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    
 </head>
 
 <body>
@@ -16,10 +19,11 @@
         <a href="#" class="logo">Portfolio</a>
         <i class='bx bx-menu' id="menu-icon" ></i>
         <nav class="navbar">
-            <a href="#about" class="active">About</a>
-            <a href="#experience">Experience</a>
+            <a href="#home"class="active">Home</a>
+            <a href="#about">About</a>
+            <!-- <a href="#experience">Experience</a> -->
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <!-- <a href="#contact">Contact</a> -->
         </nav>
     </header>
 
@@ -33,7 +37,7 @@
         <div class="home-content">
             <h4>Hi, my name is</h4>
             <h1>Luciano Peralta</h1>
-            <h3> And I'm a <span>Physicist</span></h3>
+            <h3> And I'm a <span id="typewriter-text">Físico</span></h3>
             <p>Lorem Ipsum is simply dummy text of the printing and 
                 typesetting industry. Lorem Ipsum has been the industry's 
                 standard dummy text ever since the 1500s, when an</p>
@@ -56,9 +60,41 @@
                 grant me with a general</p>
         </div>
     </section>
-    <section class="projects">
+    <!-- Experience section -->
+    <section class="experience">
+        <div class="timeline-container">
+            <div class="timeline">
+              <div class="timeline-event">
+                <div class="event-date">2020</div>
+                <div class="event-description">
+                  <h3>Evento 1</h3>
+                  <p>Descripción del evento 1.</p>
+                </div>
+              </div>
+              <div class="timeline-event">
+                <div class="event-date">2021</div>
+                <div class="event-description">
+                  <h3>Evento 2</h3>
+                  <p>Descripción del evento 2.</p>
+                </div>
+              </div>
+              <div class="timeline-event">
+                <div class="event-date">2022</div>
+                <div class="event-description">
+                  <h3>Evento 3</h3>
+                  <p>Descripción del evento 3.</p>
+                </div>
+              </div>
+            </div>
+          </div>          
+
+    </section>
 
 
+
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
         <div class="card">
             <div class="front">
             <header class="card-header">
@@ -86,11 +122,16 @@
                 <header>
                     Description
                 </header>
-
               </div>
         </div>
 
     </section>
-</body>
 
+
+    <!-- typed js -->
+
+</body>
+{% block scripts %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
 </html>
