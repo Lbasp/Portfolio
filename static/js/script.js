@@ -46,8 +46,8 @@ ScrollReveal().reveal('.contact form', { origin:  'bottom'});
 const typed = new Typed('.multiple-text', {
     strings: ['Data Scientist','Physicist', 'Mechanical Engineer'],
     typeSpeed: 100,
-    backSpeed: 80,
-    backDelay: 500,
+    backSpeed: 50,
+    backDelay: 6000,
     loop:true
   });
 
