@@ -31,7 +31,7 @@
         <a href="https://www.linkedin.com/in/luciano-bastidas-peralta-20b90a23b/" download target="_blank" class='bx bxl-linkedin'></a>
         <a href="https://github.com/Lbasp" download target="_blank" class='bx bxl-github' ></a>
     </div>
-
+    
     <!-- home section design -->
     <section class="home" id="home">
       <div class="homecontainer">
@@ -376,10 +376,21 @@
         
       </div>
     </section>
+
+
     <section class="contact" id="contact">
+      <div class="response">
+          {% if messages %}
+          <ul class="messages">
+              {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+      <div class="content">
       <h2 class="heading">Contact <span>Me!</span></h2>
     
-      <form method="post" action="/contact/">
+      <form method="post" action="{% url 'send_email' %}" id="contact-form">
         {% csrf_token %}
         <div class="input-box">
           <input type="text" name="full_name" placeholder="Full Name">
@@ -392,11 +403,17 @@
         <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
         <input type="submit" value="Send Message" class="btn">
       </form>
+      </div>
+    </div>
     </section>
-
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
     <script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+      <!-- Pop-up modal for success message -->
+
+
+  <!-- Add your JavaScript code here -->
+
 </body>
 
 </html>

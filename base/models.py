@@ -33,4 +33,9 @@ class Project(models.Model):
     )
     def __str__(self) -> str:
         return self.title
-
+class Contact(models.Model):
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    mobile_number = models.CharField(max_length=20)
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
