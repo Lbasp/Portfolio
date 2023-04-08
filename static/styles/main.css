@@ -9,10 +9,11 @@
   font-family: 'Poppins', sans-serif;
 } 
 :root {
-  --bg-color: #1f242d;
-  --second-bg-color: #323946;
-  --text-color: #fff;
-  --main-color: #0ef;
+  --bg-color: #FFFFFF;
+  --second-bg-color: #F6F4FF;
+  --third-bg-color: #FDF4F5;
+  --text-color: #00092B;
+  --main-color: #FE3A4E;
 }
 html {
   font-size: 62.5%;
@@ -33,24 +34,18 @@ section {
   left:0;
   width:100%;
   padding: 2rem 9%;
-  background: var(--bag-color);
+  background: var(--bg-color);
   display: flex;
   justify-content: space-between;
   align-items:center;
   z-index:100;
+  background: var(--third-bg-color);
 }
-.header {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  padding: 2rem 9%;
-  background: var(--bag-color);
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  z-index:100;
+.header.sticky {
+  border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
+
+
 .logo {
   font-size: 2.5rem; 
   color:var(--text-color);
@@ -61,6 +56,7 @@ section {
   font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
+  transition: .3s;
 }
 
 .navbar a:hover,
@@ -81,17 +77,23 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .home-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
 }
+span {
+  color: var(--main-color);
+}
 .home-content h4 {
   font-size: 1.2rem;
   font-weight: 700;
 }
-
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
 .home-content h1{
   font-size: 5.6rem;
   font-weight: 700;
@@ -101,12 +103,34 @@ section {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.3;
+  margin-bottom: 2rem;
 }
+.home-img img {
+  width: 35vw;
+}
+
 .sidebar a {
   justify-content: start;
   align-items: center;
   position: relative;
 } 
+.short_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--third-bg-color);
+}
+.short_info p{
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+.short-img img {
+  width: 35vw;
+}
+
 
 .about {
   display: flex;
@@ -114,10 +138,38 @@ section {
   align-items: center;
   gap: 2rem;
 }
+progress {
+  border-radius: 25px; 
+  width: 80%;
+  height: 22px;
+  margin-left: -11.5%;
+  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.3 );
+}
+progress::-webkit-progress-bar {
+  background-color: var(--second-bg-color);
+  border-radius: 25px;
+}
+progress::-webkit-progress-value {
+  background-color: var(--main-color);
+  border-radius: 25px;
+}
+
+
 
 .heading {
   text-align: center;
   font-size: 4.5rem;
+}
+.heading2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+
+.left_part h3 {
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .about-content h2 {
@@ -132,11 +184,17 @@ section {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
-
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--third-bg-color);
+}
 
 
 /* Begin of beatufil card */
-.card {
+.card .content{
   display: flex;
   position: relative;
   flex-direction: column;
@@ -151,8 +209,14 @@ section {
   font-family: 'Inter', sans-serif;
   transform-style: preserve-3d;
 }
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 
-.card:hover {
+.card:hover .content{
   transform: rotateY(180deg);
 }
 .card .front {
@@ -165,10 +229,11 @@ section {
 .card .back{
   transform: rotateY(180deg);
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  color: var(--second-bg-color);
 }
 .card .back {
   transform-style: preserve-3d;
@@ -176,6 +241,21 @@ section {
   display: flex;
   flex-direction: column;
 }
+.card .back header{
+  color: var(--main-color);
+  font-family: 'Inter';
+  font-size: 2.5rem;
+}
+.card .back p{
+  color: var(--second-bg-color);
+  font-family: 'Inter';
+  font-size: 1.3rem;
+}
+.card .back .bxl-github {
+  font-size: 20px;
+  color: var(--second-bg-color);
+}
+
 
 
 .card-author {
@@ -271,30 +351,54 @@ section {
   background-clip: text;
   border-color: white;
 }
-.timeline-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
+
+/* Timeline Container */
 .timeline {
-  position: relative;
-  padding-left: 40px;
-  margin: 50px 0;
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
 }
 
-.timeline::before {
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid #333;
+}
+
+/* Card container */
+.card2 {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #333;
+  color: gray;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: orangered;
+  position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 20px;
-  width: 4px;
-  background-color: #e91e63;
-}
-
-.timeline-event {
-  position: relative;
-  margin-bottom: 50px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid orangered;
 }
 
 .event-date {
@@ -321,9 +425,181 @@ section {
 }
 
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--third-bg-color);
+}
+.contact h2 {
+  margin-bottom: 3rem;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;  
+}
+
+.contact form .input-box {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+}
+.contact form .input-box input{
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn_i {
+  display: table-cell;
+  padding:1rem 2.8rem;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+ }
+ 
+ .btn_i::before,
+ .btn_i::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+ }
+ 
+ .btn_i::before {
+  left: -10px;
+  background: #240046;
+ }
+ 
+ .btn_i::after {
+  right: -10px;
+  background: #5a189a;
+ }
+ 
+ .btn_i:hover::before,
+ .btn_i:hover::after {
+  width: 58%;
+ }
+ 
+ .btn_i:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+ }
+ 
+ .btn_i span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+ }
+
+ .project_resume p{
+  color: var(--second-bg-color);
+ }
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=numbeer]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+
+
+
+
 /* End of beatufil card */
 #menu-icon {
   font-size:3.6rem;
   color: var(--text-color);
   display: none;
 } 
+
+
+/* BREAKPOINT */
+@media (max-width: 1200px){
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width:991px){
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+}
+@media (max-width:768px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+  }
+  .navbar.active{
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+}

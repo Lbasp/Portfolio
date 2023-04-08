@@ -8,8 +8,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type='text/css' media='screen' href = "{% static 'styles/main.css'%}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-    <script src="{% static 'js/script.js' %}"></script>
     
 </head>
 
@@ -21,9 +21,9 @@
         <nav class="navbar">
             <a href="#home"class="active">Home</a>
             <a href="#about">About</a>
-            <!-- <a href="#experience">Experience</a> -->
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
-            <!-- <a href="#contact">Contact</a> -->
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -37,56 +37,90 @@
         <div class="home-content">
             <h4>Hi, my name is</h4>
             <h1>Luciano Peralta</h1>
-            <h3> And I'm a <span id="typewriter-text">Físico</span></h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an</p>
-            
-
-            <a href="#" class="btn_dwn">Donwload CV</a>
+            <h3> and I am a <span class="multiple-text"></span></h3>
+            <p>The beauty of our world is magnified by the knowledge gained from our society. With data as our powerful tool, we can make significant improvements and have a positive impact on the world around us.</p>
+            <a href="{% static 'pdf/CV.pdf' %}" download target="_blank" class="btn_i"><span>Donwload CV</span></a>
         </div>
+        <div class="home-image" id="home-image">
+          <img src="{% static 'images/Planet Logo.png' %}" alt="">
+        </div>
+
+    </section>
+
+    <section class="short_info">
+      <div class="left_part">
+        <h2 class="heading2">Here my Short Information</h2>
+        <h3>Creating With Passion While Learning From The World</h3>
+      </div>
+      <div class="right_part">
+        <p>I specialize in the research field, my background had led me the opportunity</p>
+      </div>
 
     </section>
 
     <!-- About section desing -->
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="#" alt="">
-        </div>
+      <div class="short-img" id="short-img">
+        <img src="{% static 'images/Foto.png' %}" alt="">
+      </div>
         <div class="about-content">
             <h2 class="heading"> About <span>Me</span></h2>
-            <p>My studies are so abroad of themselves, a engineer, a 
-                scientist and a programmer. But, these diferent field have 
-                grant me with a general</p>
-        </div>
+            <div class="skills">
+              <div>
+                <ul>
+                  <li><h2 class="class">SQL</h2></li>
+                  <progress id="file" value="65" max="100"> </progress>
+                  <li><h2 class="class">Excel</h2></li>
+                  <progress id="file" value="100" max="100"> </progress>
+                  <li><h2 class="class">Python</h2></li>
+                  <progress id="file" value="100" max="100"> </progress>
+                  <li><h2 class="class">Matlab</h2></li>
+                  <progress id="file" value="80" max="100"> </progress>
+                  <li><h2 class="class">Java</h2></li>
+                  <progress id="file" value="85" max="100"> </progress>
+                  <li><h2 class="class">C++</h2></li>
+                  <progress id="file" value="85" max="100"> </progress>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li><h2 class="class">Project Management</h2></li>
+                  <progress id="file" value="75" max="100"> </progress>
+                  <li><h2 class="class">Data Mining</h2></li>
+                  <progress id="file" value="65" max="100"> </progress>
+                  <li><h2 class="class">Stadistics</h2></li>
+                  <progress id="file" value="100" max="100"> </progress>
+                  <li><h2 class="class">AWS</h2></li>
+                  <progress id="file" value="60" max="100"> </progress>
+                </ul>
+              </div>
+            </div>          
+          </div>
     </section>
     <!-- Experience section -->
-    <section class="experience">
-        <div class="timeline-container">
-            <div class="timeline">
-              <div class="timeline-event">
-                <div class="event-date">2020</div>
-                <div class="event-description">
-                  <h3>Evento 1</h3>
-                  <p>Descripción del evento 1.</p>
-                </div>
-              </div>
-              <div class="timeline-event">
-                <div class="event-date">2021</div>
-                <div class="event-description">
-                  <h3>Evento 2</h3>
-                  <p>Descripción del evento 2.</p>
-                </div>
-              </div>
-              <div class="timeline-event">
-                <div class="event-date">2022</div>
-                <div class="event-description">
-                  <h3>Evento 3</h3>
-                  <p>Descripción del evento 3.</p>
-                </div>
-              </div>
+    <section class="experience" id="experience">
+      <div class="timeline">
+        <div class="outer">
+          <div class="card2">
+            <div class="info">
+              <h3 class="title">Bachelor Degree on Physics</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
-          </div>          
+          </div>
+          <div class="card2">
+            <div class="info">
+              <h3 class="title">Bachelor Degree on Mechanical Engineer</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="card2">
+            <div class="info">
+              <h3 class="title">Coming- Master on Computer Science</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </section>
 
@@ -95,13 +129,23 @@
 
     <!-- Projects section -->
     <section class="projects" id="projects">
+
+      <!-- First Project -->
         <div class="card">
+          <div class="content">
             <div class="front">
             <header class="card-header">
-              <p>May 3rd 2023</p>
-              <span class="title">A Tale of Two Divs</span>
+              <p>Apr 6th 2023</p>
+              <span class="title">Portfolio Website</span>
             </header>
-            <div class="card-author">
+            <div class="project_resume">
+              <p>To demonstrate my skills as a fast learner and my passion for coding, 
+                I took on the challenge of creating a website in Django, an environment 
+                that I had no prior experience with. While it was my first attempt, I believe 
+                the outcome was impressive. 
+              </p>
+            </div>
+            <div class="card-author" style="margin-top: 0.5rem;">
               <a class="author-avatar" href="#">
                 <span>
               </span></a>
@@ -109,29 +153,162 @@
                 <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
               </svg>
               <div class="author-name">
-                <div class="author-name-prefix">Author</div> Folarin Lawal
+                <div class="author-name-prefix">Author</div> Luciano Peralta
                 </div>
               </div>
               <div class="tags">
-                <a href="#">html</a>
-                <a href="#">css</a>
-                <a href="#">web-dev</a>
+                <a>html</a>
+                <a>css</a>
+                <a>Data Mining</a>
+                <a>Python</a>
               </div>
               </div>
               <div class="back">
                 <header>
-                    Description
+                    Description:
                 </header>
+                <p> This project utilizes a combination of Django 
+                  (built on Python), HTML, CSS, and Javascript. It's 
+                  the same website that you are currently viewing. The 
+                  animations, templates, and objects are organized by their 
+                  respective languages (HTML, CSS, JS). The project is 
+                  deployed on AWS to showcase my proficiency in this 
+                  platform.</p>
+
+                  <p>As for future improvements, I aim to incorporate an SQL environment so that new projects can be automatically added to the SQL database. This will streamline the process of updating and adding new content to the website.
+                </p>
+                <a href="https://github.com/Lbasp/Portfolio" class='bx bxl-github'  download target="_blank" style="margin-top: 1rem"></a>
               </div>
+            </div>
         </div>
 
+        <!-- second project -->
+        <div class="card">
+          <div class="content">
+            <div class="front">
+            <header class="card-header">
+              <p>Dic 2nd 2023</p>
+              <span class="title">42 Hacks Projects</span>
+            </header>
+            <div class="project_resume">
+              <p>During my remote internship, I worked with a team of four 
+                in collaboration with the 42Hacks team to study the 34GB dataset 
+                on the population of Switzerland. This project presented us with 
+                valuable experience in data ethics and security, which were essential 
+                considerations when handling such sensitive data. Additionally, as 
+                part of our analysis, we needed to explore external data sources, 
+                which required us to perform data mining.</p>
+
+                
+            </div>
+            <div class="card-author" style="margin-top: 0.5rem;">
+              <a class="author-avatar" href="#">
+                <span>
+              </span></a>
+              <svg class="half-circle" viewBox="0 0 106 57">
+                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+              </svg>
+              <div class="author-name">
+                <div class="author-name-prefix">Authors</div>Group AInsights
+                </div>
+              </div>
+              <div class="tags">
+                <a>Machine Learning</a>
+                <a>Python</a>
+                <a>Management</a>
+                <a>MongoDB</a>
+                <a>Data Mining</a>
+              </div>
+              </div>
+              <div class="back">
+                <header>
+                    Description:
+                </header>
+                <p> Throughout this internship, our team made several interesting discoveries regarding the dataset. 
+                  For example, we observed that in cities where the Green Party was more prominent, there wasn't necessarily 
+                  a higher usage of public transportation, which could have been seen as a more environmentally friendly option.
+                   Additionally, our analysis revealed that families with more children tended to use trains less often, as 
+                   confirmed through our implementation of linear regression techniques. </p>
+                   <p>--Classified Project--</p>
+              
+                <!-- <a href="https://github.com/Lbasp/Portfolio" class='bx bxl-github'  download target="_blank" style="margin-top: 2rem"></a> -->
+              </div>
+            </div>
+        </div>
+        <!-- Third Project -->
+        <div class="card">
+          <div class="content">
+            <div class="front">
+            <header class="card-header">
+              <p>Apr 6th 2023</p>
+              <span class="title">White Votes </span>
+            </header>
+            <div class="project_resume">
+              <p>The objective of this project is to explore the possibility of predicting the outcome of the 2022 Elections in Colombia by analyzing the available data on voting patterns. (Specially white votes).
+
+              </p>
+            </div>
+            <div class="card-author" style="margin-top: 0.5rem;">
+              <a class="author-avatar" href="#">
+                <span>
+              </span></a>
+              <svg class="half-circle" viewBox="0 0 106 57">
+                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+              </svg>
+              <div class="author-name">
+                <div class="author-name-prefix">Authors</div> <p>Gabriel Jiménez</p> <p>Luciano Peralta</p>
+                </div>
+              </div>
+              <div class="tags">
+                <a>Python</a>
+                <a>Stadistics</a>
+                <a>Data Mining</a>
+              </div>
+              </div>
+              <div class="back">
+                <header>
+                    Description:
+                </header>
+                <p> The procedure involved mining data from government 
+                  repositories, with a focus on selecting data that has 
+                  been shown in previous research to be important factors 
+                  affecting voting patterns. We then analyzed this data to 
+                  determine if there are any significant relationships 
+                  between the variables. To do this, we utilized a machine 
+                  learning regressor to identify any potential correlations.
+                </p>
+
+                  <p>As for future improvements, it would be great if the code gave 
+                    the error of the prediction. The stablish model can perform it but 
+                    it was not implemented.
+                </p>
+                <a href="https://github.com/Lbasp/White_Vote_Prediction" class='bx bxl-github'  download target="_blank" style="margin-top: 1rem"></a>
+              </div>
+            </div>
+        </div>
+        
+
+    </section>
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name">
+          <input type="text" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number">
+          <input type="text" placeholder="Email Subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
     </section>
 
-
-    <!-- typed js -->
-
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </body>
-{% block scripts %}
-<script src="{% static 'js/script.js' %}"></script>
-{% endblock %}
+
 </html>
