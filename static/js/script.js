@@ -37,9 +37,10 @@ ScrollReveal({
     duration: 2000,
     delay: 200
 });
-ScrollReveal().reveal('.home-content, .heading', { origin:  'top'});
-ScrollReveal().reveal('.home-img', { origin:  'right'});
-ScrollReveal().reveal('.contact form', { origin:  'bottom'});
+ScrollReveal().reveal('.home-content, .heading, .project_container', { origin:  'top'});
+ScrollReveal().reveal('.home-image, .right_part, .header_esp, .skills', { origin:  'right'});
+ScrollReveal().reveal('.left_part, .short-img, .header_exp', { origin:  'left'});
+ScrollReveal().reveal('.contact form, .lista, .timeline', { origin:  'bottom'});
 
 // typing js
 

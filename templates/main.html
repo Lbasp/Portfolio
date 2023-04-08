@@ -34,6 +34,7 @@
 
     <!-- home section design -->
     <section class="home" id="home">
+      <div class="homecontainer">
         <div class="home-content">
             <h4>Hi, my name is</h4>
             <h1>Luciano Peralta</h1>
@@ -44,17 +45,21 @@
         <div class="home-image" id="home-image">
           <img src="{% static 'images/Planet Logo.png' %}" alt="">
         </div>
-
+      </div>
     </section>
 
     <section class="short_info">
+
       <div class="left_part">
         <h2 class="heading2">Here my Short Information</h2>
         <h3>Creating With Passion While Learning From The World</h3>
       </div>
-      <div class="right_part">
-        <p>I specialize in the research field, my background had led me the opportunity</p>
+      <div class="right_part" id="right_part">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
       </div>
+
 
     </section>
 
@@ -100,28 +105,61 @@
     </section>
     <!-- Experience section -->
     <section class="experience" id="experience">
-      <div class="timeline">
-        <div class="outer">
-          <div class="card2">
-            <div class="info">
-              <h3 class="title">Bachelor Degree on Physics [Uniandes]</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-          </div>
-          <div class="card2">
-            <div class="info">
-              <h3 class="title">Bachelor Degree on Mechanical Engineer [Uniandes]</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-          </div>
-          <div class="card2">
-            <div class="info">
-              <h3 class="title">Coming- Master on Computer Science (spec. Data Science)</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <div class="studies">
+        <div>
+          <header class="header_exp">Experience</header>
+          <div class="timeline">
+            <div class="outer">
+              <div class="card2">
+                <div class="info">
+                  <h3 class="title">Bachelor Degree on Physics [Uniandes]</h3>
+                  <H4>Aug2019-June2023</H4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+              </div>
+              <div class="card2">
+                <div class="info">
+                  <h3 class="title">Bachelor Degree on Mechanical Engineer [Uniandes]</h3>
+                  <H4>Jan2020-Ongoing</H4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+              </div>
+              <div class="card2">
+                <div class="info">
+                  <h3 class="title">Research Assistant - Quantum Materials Lab</h3>
+                  <H4>Jan2022-Ongoing</H4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+              </div>
+              <div class="card2">
+                <div class="info">
+                  <h3 class="title">42 Hacks Project</h3>
+                  <H4>July2022-Dec2022</H4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+              </div>
+              <div class="card2">
+                <div class="info">
+                  <h3 class="title">Future- Master on Computer Science (spec. Data Science)</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="online">
+          <header class="header_esp">Specializations</header>
+          <ul class="lista">
+            <li>Machine Learning Specialization - [DeepLearning AI - Standford]</li>
+            <li>Data Analytics Specialization - [Google]</li>
+            <li>Project Management: Foundations and Initiation - [University of Colorado Boulder]</li>
+            <li>Web Application Technologies and Django - [University of Michigan]</li>
+            <li>Excel Skills for Data Analytics and Visualization Specialization - [Macquaire University]</li>
+          </ul>
+
+        </div>
       </div>
+
 
     </section>
 
@@ -130,7 +168,7 @@
 
     <!-- Projects section -->
     <section class="projects" id="projects">
-
+      <div class="project_container">
       <!-- First Project -->
         <div class="card">
           <div class="content">
@@ -336,7 +374,7 @@
             </div>
         </div>
         
-
+      </div>
     </section>
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
